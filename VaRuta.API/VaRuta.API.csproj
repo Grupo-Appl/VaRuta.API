@@ -7,7 +7,64 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3"/>
+        <PackageReference Include="AutoMapper" Version="12.0.0" />
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.10" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.10" />
+        <PackageReference Include="MySql.EntityFrameworkCore" Version="6.0.7" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="BookingCargo\Domain\Models" />
+      <Folder Include="BookingCargo\Domain\Repositories" />
+      <Folder Include="BookingCargo\Domain\Services" />
+      <Folder Include="BookingCargo\Interfaces\Internal" />
+      <Folder Include="BookingCargo\Mapping" />
+      <Folder Include="BookingCargo\Persistence\Repositories" />
+      <Folder Include="BookingCargo\Resources" />
+      <Folder Include="BookingCargo\Services" />
+      <Folder Include="Profiles\Domain\Models" />
+      <Folder Include="Profiles\Domain\Repositories" />
+      <Folder Include="Profiles\Domain\Services" />
+      <Folder Include="Profiles\Interfaces\Internal" />
+      <Folder Include="Profiles\Interfaces\Rest\Controllers" />
+      <Folder Include="Profiles\Mapping" />
+      <Folder Include="Profiles\Persistence\Repositories" />
+      <Folder Include="Profiles\Resources" />
+      <Folder Include="Profiles\Services" />
+      <Folder Include="Publishing\Domain\Models" />
+      <Folder Include="Publishing\Domain\Repositories" />
+      <Folder Include="Publishing\Domain\Services" />
+      <Folder Include="Publishing\Interfaces\Internal" />
+      <Folder Include="Publishing\Interfaces\Rest\Controllers" />
+      <Folder Include="Publishing\Mapping" />
+      <Folder Include="Publishing\Persistence\Repositories" />
+      <Folder Include="Publishing\Resources" />
+      <Folder Include="Publishing\Services" />
+      <Folder Include="Routing\Domain\Models" />
+      <Folder Include="Routing\Domain\Repositories" />
+      <Folder Include="Routing\Domain\Services" />
+      <Folder Include="Routing\Interfaces\Internal" />
+      <Folder Include="Routing\Interfaces\Rest\Controllers" />
+      <Folder Include="Routing\Mapping" />
+      <Folder Include="Routing\Persistence\Repositories" />
+      <Folder Include="Routing\Resources" />
+      <Folder Include="Routing\Services" />
+      <Folder Include="Shared\Domain\Repositories" />
+      <Folder Include="Shared\Domain\Services\Communication" />
+      <Folder Include="Shared\Extensions" />
+      <Folder Include="Shared\Persistence\Contexts" />
+      <Folder Include="Shared\Persistence\Repositories" />
+      <Folder Include="Tracking\Domain\Models" />
+      <Folder Include="Tracking\Domain\Repositories" />
+      <Folder Include="Tracking\Domain\Services" />
+      <Folder Include="Tracking\Interfaces\Internal" />
+      <Folder Include="Tracking\Interfaces\Rest\Controllers" />
+      <Folder Include="Tracking\Mapping" />
+      <Folder Include="Tracking\Persistence\Repositories" />
+      <Folder Include="Tracking\Resources" />
+      <Folder Include="Tracking\Services" />
     </ItemGroup>
 
 </Project>
