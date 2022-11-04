@@ -16,14 +16,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="BookingCargo\Domain\Models" />
-      <Folder Include="BookingCargo\Domain\Repositories" />
-      <Folder Include="BookingCargo\Domain\Services" />
-      <Folder Include="BookingCargo\Interfaces\Internal" />
-      <Folder Include="BookingCargo\Mapping" />
-      <Folder Include="BookingCargo\Persistence\Repositories" />
-      <Folder Include="BookingCargo\Resources" />
-      <Folder Include="BookingCargo\Services" />
+      <Folder Include="Booking\Interfaces\Internal" />
       <Folder Include="Profiles\Domain\Models" />
       <Folder Include="Profiles\Domain\Repositories" />
       <Folder Include="Profiles\Domain\Services" />
@@ -51,11 +44,6 @@
       <Folder Include="Routing\Persistence\Repositories" />
       <Folder Include="Routing\Resources" />
       <Folder Include="Routing\Services" />
-      <Folder Include="Shared\Domain\Repositories" />
-      <Folder Include="Shared\Domain\Services\Communication" />
-      <Folder Include="Shared\Extensions" />
-      <Folder Include="Shared\Persistence\Contexts" />
-      <Folder Include="Shared\Persistence\Repositories" />
       <Folder Include="Tracking\Domain\Models" />
       <Folder Include="Tracking\Domain\Repositories" />
       <Folder Include="Tracking\Domain\Services" />
