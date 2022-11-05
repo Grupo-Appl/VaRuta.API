@@ -8,5 +8,8 @@ public class ModelToResourceProfile :Profile
     {
         CreateMap< Destination , DestinationResource>();
         CreateMap< Document , DocumentResource>();
+        CreateMap< TypeOfPackage , TypeOfPackageResource>();
     }
 }
+
+

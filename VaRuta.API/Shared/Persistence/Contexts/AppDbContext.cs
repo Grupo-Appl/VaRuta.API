@@ -12,6 +12,8 @@ public class AppDbContext : DbContext
     public DbSet<Document> Documents { get; set; }
 
     public DbSet<Shipment> Shipments { get; set; }
+    
+    public DbSet<TypeOfPackage> TypeOfPackages { get; set; }
 
     public AppDbContext(DbContextOptions options) : base(options)
     {
@@ -27,13 +29,22 @@ public class AppDbContext : DbContext
         builder.Entity<Destination>().Property(p => p.Name).IsRequired().HasMaxLength(150);
         
         // Aqui otras tablas 
+        
+        
+        // configuracion de tabla tipo de paquete
+        builder.Entity<TypeOfPackage>().ToTable("TypeOfPackages");
+        builder.Entity<TypeOfPackage>().HasKey(p => p.Id);
+        builder.Entity<TypeOfPackage>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<TypeOfPackage>().Property(p => p.Name).IsRequired().HasMaxLength(150);
+
+        // configuracion de tabla tipo de Documents
 
         builder.Entity<Document>().ToTable("Documents");
         builder.Entity<Document>().HasKey(p => p.Id);
         builder.Entity<Document>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
         builder.Entity<Document>().Property(p => p.Name).IsRequired().HasMaxLength(100);
 
-        // configuracion de tabla destino
+        // configuracion de tabla Shipments
         builder.Entity<Shipment>().ToTable("Shipments");
         builder.Entity<Shipment>().HasKey(p => p.Id);
         builder.Entity<Shipment>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
