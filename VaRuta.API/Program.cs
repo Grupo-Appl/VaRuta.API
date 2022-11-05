@@ -3,6 +3,10 @@ using VaRuta.API.Booking.Domain.Repositories;
 using VaRuta.API.Booking.Domain.Services;
 using VaRuta.API.Booking.Persistence.Repositories;
 using VaRuta.API.Booking.Services;
+using VaRuta.API.Routing.Domain.Repositories;
+using VaRuta.API.Routing.Domain.Services;
+using VaRuta.API.Routing.Persistence.Repositories;
+using VaRuta.API.Routing.Services;
 using VaRuta.API.Shared.Domain.Repositories;
 using VaRuta.API.Shared.Persistence.Contexts;
 using VaRuta.API.Shared.Persistence.Repositories;
@@ -35,6 +39,8 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 // Learning Bounded Context Injection Configuration **agregar otros tablas
 builder.Services.AddScoped<IDestinationRepository, DestinationRepository>();
 builder.Services.AddScoped<IDestinationService, DestinationService>();
+builder.Services.AddScoped<IShipmentRepository, ShipmentRepository>();
+builder.Services.AddScoped<IShipmentService, ShipmentService>();
 
 builder.Services.AddScoped<IDocumentRepository, DocumentRepository>();
 builder.Services.AddScoped<IDocumentService, DocumentService>();
@@ -42,7 +48,9 @@ builder.Services.AddScoped<IDocumentService, DocumentService>();
 // AutoMapper Configuration
 builder.Services.AddAutoMapper(
     typeof(VaRuta.API.Booking.Mapping.ResourceToModelProfile),
-    typeof(VaRuta.API.Booking.Mapping.ModelToResourceProfile)
+    typeof(VaRuta.API.Booking.Mapping.ModelToResourceProfile),
+    typeof(VaRuta.API.Routing.Mapping.ResourceToModelProfile),
+    typeof(VaRuta.API.Routing.Mapping.ModelToResourceProfile)
     );
 
 var app = builder.Build();
