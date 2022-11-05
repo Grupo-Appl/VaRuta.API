@@ -32,7 +32,7 @@ public class TypeOfPackageService : ITypeOfPackageService
         }
         catch (Exception e)
         {
-            return new TypeOfPackageResponse($"An error occurred while saving the document: {e.Message}");
+            return new TypeOfPackageResponse($"An error occurred while saving the package: {e.Message}");
         }
     }
 
@@ -41,7 +41,7 @@ public class TypeOfPackageService : ITypeOfPackageService
         var existingTypeOfPackage = await _typeOfPackageRepository.FindByIdAsync(id);
 
         if (existingTypeOfPackage == null)
-            return new TypeOfPackageResponse("Document not found.");
+            return new TypeOfPackageResponse("Package not found.");
         
         existingTypeOfPackage.Name = typeOfPackage.Name;
 
@@ -54,7 +54,7 @@ public class TypeOfPackageService : ITypeOfPackageService
         }
         catch (Exception e)
         {
-            return new TypeOfPackageResponse($"An error occurred while updating the document: {e.Message}");
+            return new TypeOfPackageResponse($"An error occurred while updating the Package: {e.Message}");
         }
     }
 
@@ -63,7 +63,7 @@ public class TypeOfPackageService : ITypeOfPackageService
         var existingTypeOfPackage = await _typeOfPackageRepository.FindByIdAsync(id);
         
         if (existingTypeOfPackage == null)
-            return new TypeOfPackageResponse("Document not found.");
+            return new TypeOfPackageResponse("Package not found.");
         try
         {
             _typeOfPackageRepository.Remove(existingTypeOfPackage);
@@ -73,7 +73,7 @@ public class TypeOfPackageService : ITypeOfPackageService
         }
         catch (Exception e)
         {
-            return new TypeOfPackageResponse($"An error occurred while deleting the document: {e.Message}");
+            return new TypeOfPackageResponse($"An error occurred while deleting the package: {e.Message}");
         }
 
     }
