@@ -44,7 +44,8 @@ builder.Services.AddScoped<IShipmentService, ShipmentService>();
 
 builder.Services.AddScoped<IDocumentRepository, DocumentRepository>();
 builder.Services.AddScoped<IDocumentService, DocumentService>();
-
+builder.Services.AddScoped<ITypeOfPackageRepository, TypeOfPackageRepository>();
+builder.Services.AddScoped<ITypeOfPackageService, TypeOfPackageService>();
 // AutoMapper Configuration
 builder.Services.AddAutoMapper(
     typeof(VaRuta.API.Booking.Mapping.ResourceToModelProfile),

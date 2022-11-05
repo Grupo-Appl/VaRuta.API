@@ -12,6 +12,7 @@ namespace VaRuta.API.BookingCargo.Interfaces.Rest.Controllers;
 public class DocumentsController : ControllerBase
 {
     
+    
  private readonly IDocumentService _documentService;
     private readonly IMapper _mapper;
 
