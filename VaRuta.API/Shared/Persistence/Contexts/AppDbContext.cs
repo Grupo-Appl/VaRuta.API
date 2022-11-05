@@ -50,6 +50,12 @@ public class AppDbContext : DbContext
         builder.Entity<Shipment>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
         builder.Entity<Shipment>().Property(p => p.Description).IsRequired().HasMaxLength(150);
 
+        builder.Entity<Destination>()
+            .HasMany(p => p.Shipments)
+            .WithOne(p => p.Destination)
+            .HasForeignKey(p => p.DestinyId);
+        
+
         
         // Apply Snake Case Naming Convention
         builder.UseSnakeCaseNamingConvention();

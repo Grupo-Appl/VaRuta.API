@@ -8,9 +8,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+
     <list default="true" id="f66817fd-c71d-4e06-a81c-62b23f86c53d" name="Changes" comment="fix delete">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VaRuta.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VaRuta.API/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VaRuta.API/Booking/Services/TypeOfPackageService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VaRuta.API/Booking/Services/TypeOfPackageService.cs" afterDir="false" />
+
+    <list default="true" id="f66817fd-c71d-4e06-a81c-62b23f86c53d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.VaRuta.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VaRuta.API/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VaRuta.API/Booking/Domain/Models/Destination.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VaRuta.API/Booking/Domain/Models/Destination.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VaRuta.API/Routing/Domain/Models/Shipment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VaRuta.API/Routing/Domain/Models/Shipment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VaRuta.API/Shared/Persistence/Contexts/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VaRuta.API/Shared/Persistence/Contexts/AppDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VaRuta.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/VaRuta.API/appsettings.json" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +123,7 @@
       <workItem from="1667620897726" duration="101000" />
       <workItem from="1667624307078" duration="226000" />
       <workItem from="1667624942896" duration="184000" />
+
       <workItem from="1667625486585" duration="6803000" />
       <workItem from="1667671406604" duration="2412000" />
     </task>
@@ -123,6 +133,11 @@
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
       <updated>1667669773535</updated>
+
+      <workItem from="1667625486585" duration="7490000" />
+      <workItem from="1667666669473" duration="2677000" />
+      <workItem from="1667680605883" duration="4616000" />
+
     </task>
     <task id="LOCAL-00002" summary="change password">
       <created>1667671930362</created>
