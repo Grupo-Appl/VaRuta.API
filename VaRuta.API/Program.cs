@@ -36,6 +36,9 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IDestinationRepository, DestinationRepository>();
 builder.Services.AddScoped<IDestinationService, DestinationService>();
 
+builder.Services.AddScoped<IDocumentRepository, DocumentRepository>();
+builder.Services.AddScoped<IDocumentService, DocumentService>();
+
 // AutoMapper Configuration
 builder.Services.AddAutoMapper(
     typeof(VaRuta.API.Booking.Mapping.ResourceToModelProfile),
