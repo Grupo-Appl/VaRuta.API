@@ -1,3 +1,5 @@
+using VaRuta.API.Booking.Domain.Models;
+
 namespace VaRuta.API.Routing.Domain.Models;
 
 public class Shipment
@@ -9,4 +11,5 @@ public class Shipment
     public int Weight { get; set; }
     public string  Date { get; set; }
     public int DestinyId { get; set; }
+    public Destination Destination { get; set; }
 }
