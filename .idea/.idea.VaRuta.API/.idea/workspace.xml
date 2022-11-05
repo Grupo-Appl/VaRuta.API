@@ -7,10 +7,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f66817fd-c71d-4e06-a81c-62b23f86c53d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VaRuta.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VaRuta.API/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VaRuta.API/Booking/Domain/Models/Destination.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VaRuta.API/Booking/Domain/Models/Destination.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VaRuta.API/Routing/Domain/Models/Shipment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VaRuta.API/Routing/Domain/Models/Shipment.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VaRuta.API/Shared/Persistence/Contexts/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VaRuta.API/Shared/Persistence/Contexts/AppDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VaRuta.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/VaRuta.API/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +18,39 @@
       <list>
         <option value="tsconfig.json" />
       </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/development" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="development" />
+      </map>
     </option>
   </component>
   <component name="MarkdownSettingsMigration">
@@ -93,7 +122,8 @@
       <workItem from="1667624942896" duration="184000" />
       <workItem from="1667625486585" duration="7490000" />
       <workItem from="1667666669473" duration="2677000" />
-      <workItem from="1667680605883" duration="4616000" />
+      <workItem from="1667680605883" duration="7572000" />
+      <workItem from="1667691542575" duration="172000" />
     </task>
     <servers />
   </component>
