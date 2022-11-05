@@ -61,11 +61,12 @@ public class TypeOfPackageService : ITypeOfPackageService
     public async Task<TypeOfPackageResponse> DeleteAsync(int id)
     {
         var existingTypeOfPackage = await _typeOfPackageRepository.FindByIdAsync(id);
+        
         if (existingTypeOfPackage == null)
             return new TypeOfPackageResponse("Document not found.");
         try
         {
-            _typeOfPackageRepository.Update(existingTypeOfPackage);
+            _typeOfPackageRepository.Remove(existingTypeOfPackage);
             await _unitOfWork.CompleteAsync();
 
             return new TypeOfPackageResponse(existingTypeOfPackage);
