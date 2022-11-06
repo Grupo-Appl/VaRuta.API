@@ -1,4 +1,4 @@
-using VaRuta.API.Booking.Domain.Models;
+﻿using VaRuta.API.Booking.Domain.Models;
 
 namespace VaRuta.API.Booking.Domain.Repositories;
 

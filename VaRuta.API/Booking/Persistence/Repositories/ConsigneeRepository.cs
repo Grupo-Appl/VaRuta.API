@@ -1,4 +1,4 @@
-using VaRuta.API.Booking.Domain.Models;
+﻿using VaRuta.API.Booking.Domain.Models;
 using VaRuta.API.Booking.Domain.Repositories;
 using VaRuta.API.Shared.Persistence.Contexts;
 using VaRuta.API.Shared.Persistence.Repositories;

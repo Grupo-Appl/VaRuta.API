@@ -6,7 +6,9 @@ public class ModelToResourceProfile :Profile
 {
     public ModelToResourceProfile()
     {
-        CreateMap< Destination , DestinationResource>();
+        CreateMap<Destination, DestinationResource>();
+        
+        
         CreateMap<Consignees, ConsigneesResource>();
     }
 }

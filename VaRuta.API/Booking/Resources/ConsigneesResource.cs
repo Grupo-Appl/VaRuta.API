@@ -1,4 +1,4 @@
-namespace VaRuta.API.Booking.Resources;
+﻿namespace VaRuta.API.Booking.Resources;
 
 public class ConsigneesResource
 {

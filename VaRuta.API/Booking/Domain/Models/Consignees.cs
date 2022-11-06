@@ -1,4 +1,4 @@
-namespace VaRuta.API.Booking.Domain.Models;
+﻿namespace VaRuta.API.Booking.Domain.Models;
 
 public class Consignees
 {
