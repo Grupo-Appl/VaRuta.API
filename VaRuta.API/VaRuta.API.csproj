@@ -35,7 +35,9 @@
       <Folder Include="Publishing\Persistence\Repositories" />
       <Folder Include="Publishing\Resources" />
       <Folder Include="Publishing\Services" />
+
       <Folder Include="Routing\Interfaces\Internal" />
+
       <Folder Include="Tracking\Domain\Models" />
       <Folder Include="Tracking\Domain\Repositories" />
       <Folder Include="Tracking\Domain\Services" />

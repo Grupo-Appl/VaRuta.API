@@ -6,9 +6,16 @@ public class ModelToResourceProfile :Profile
 {
     public ModelToResourceProfile()
     {
+
         CreateMap< Destination , DestinationResource>();
         CreateMap< Document , DocumentResource>();
         CreateMap< TypeOfPackage , TypeOfPackageResource>();
+
+        CreateMap<Destination, DestinationResource>();
+        
+        
+        CreateMap<Consignees, ConsigneesResource>();
+
     }
 }
 
