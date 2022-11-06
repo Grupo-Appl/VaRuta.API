@@ -35,15 +35,9 @@
       <Folder Include="Publishing\Persistence\Repositories" />
       <Folder Include="Publishing\Resources" />
       <Folder Include="Publishing\Services" />
-      <Folder Include="Routing\Domain\Models" />
-      <Folder Include="Routing\Domain\Repositories" />
-      <Folder Include="Routing\Domain\Services" />
+
       <Folder Include="Routing\Interfaces\Internal" />
-      <Folder Include="Routing\Interfaces\Rest\Controllers" />
-      <Folder Include="Routing\Mapping" />
-      <Folder Include="Routing\Persistence\Repositories" />
-      <Folder Include="Routing\Resources" />
-      <Folder Include="Routing\Services" />
+
       <Folder Include="Tracking\Domain\Models" />
       <Folder Include="Tracking\Domain\Repositories" />
       <Folder Include="Tracking\Domain\Services" />
