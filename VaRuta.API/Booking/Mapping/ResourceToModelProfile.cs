@@ -10,9 +10,11 @@ public class ResourceToModelProfile : Profile
     {
         CreateMap<SaveDestinationResource, Destination>();
 
+        CreateMap<SaveSenderResource, Sender>();
+
+
         CreateMap<SaveDocumentResource, Document>();
         CreateMap<SaveTypeOfPackageResource, TypeOfPackage>();
         CreateMap<SaveConsigneesResource, Consignees>();
-
     }
 }

@@ -3,6 +3,12 @@
 /workspace.xml
 # Rider ignored files
 
+/projectSettingsUpdater.xml
+/.idea.VaRuta.API.iml
+/modules.xml
+/contentModel.xml
+
+
 /contentModel.xml
 /.idea.VaRuta.API.iml
 /projectSettingsUpdater.xml
