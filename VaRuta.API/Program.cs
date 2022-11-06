@@ -35,6 +35,8 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 // Learning Bounded Context Injection Configuration **agregar otros tablas
 builder.Services.AddScoped<IDestinationRepository, DestinationRepository>();
 builder.Services.AddScoped<IDestinationService, DestinationService>();
+builder.Services.AddScoped<IConsigneesRepository, ConsigneeRepository>();
+builder.Services.AddScoped<IConsigneesService, ConsigneesService>();
 
 // AutoMapper Configuration
 builder.Services.AddAutoMapper(
