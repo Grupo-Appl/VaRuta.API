@@ -40,6 +40,11 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IDestinationRepository, DestinationRepository>();
 builder.Services.AddScoped<IDestinationService, DestinationService>();
 
+
+builder.Services.AddScoped<ISenderRepository, SenderRepository>();
+builder.Services.AddScoped<ISenderService, SenderService>();
+
+
 builder.Services.AddScoped<IShipmentRepository, ShipmentRepository>();
 builder.Services.AddScoped<IShipmentService, ShipmentService>();
 
@@ -51,6 +56,7 @@ builder.Services.AddScoped<IDocumentRepository, DocumentRepository>();
 builder.Services.AddScoped<IDocumentService, DocumentService>();
 builder.Services.AddScoped<ITypeOfPackageRepository, TypeOfPackageRepository>();
 builder.Services.AddScoped<ITypeOfPackageService, TypeOfPackageService>();
+
 // AutoMapper Configuration
 builder.Services.AddAutoMapper(
     typeof(VaRuta.API.Booking.Mapping.ResourceToModelProfile),

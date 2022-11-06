@@ -1,3 +1,4 @@
+using System.Reflection.Metadata;
 using AutoMapper;
 using VaRuta.API.Booking.Domain.Models;
 using VaRuta.API.Booking.Resources;
@@ -8,6 +9,9 @@ public class ModelToResourceProfile :Profile
     {
 
         CreateMap< Destination , DestinationResource>();
+
+        CreateMap<Sender, SenderResource>();
+
         CreateMap< Document , DocumentResource>();
         CreateMap< TypeOfPackage , TypeOfPackageResource>();
 
