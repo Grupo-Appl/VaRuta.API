@@ -9,11 +9,18 @@ public class AppDbContext : DbContext
 {
     public DbSet<Destination> Destinations { get; set; }
 
+
     public DbSet<Document> Documents { get; set; }
 
     public DbSet<Shipment> Shipments { get; set; }
     
     public DbSet<TypeOfPackage> TypeOfPackages { get; set; }
+
+    
+    
+    
+    public DbSet<Consignees> Consignees { get; set; }
+
 
     public AppDbContext(DbContextOptions options) : base(options)
     {
@@ -27,9 +34,13 @@ public class AppDbContext : DbContext
         builder.Entity<Destination>().HasKey(p => p.Id);
         builder.Entity<Destination>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
         builder.Entity<Destination>().Property(p => p.Name).IsRequired().HasMaxLength(150);
+
+
+
+
         
-        // Aqui otras tablas 
         
+
         
         // configuracion de tabla tipo de paquete
         builder.Entity<TypeOfPackage>().ToTable("TypeOfPackages");
@@ -49,6 +60,14 @@ public class AppDbContext : DbContext
         builder.Entity<Shipment>().HasKey(p => p.Id);
         builder.Entity<Shipment>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
         builder.Entity<Shipment>().Property(p => p.Description).IsRequired().HasMaxLength(150);
+        
+        // tablas consignees
+        builder.Entity<Consignees>().ToTable("Consignees");
+        builder.Entity<Consignees>().HasKey(p => p.Id);
+        builder.Entity<Consignees>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<Consignees>().Property(p => p.Name).IsRequired().HasMaxLength(150);
+        builder.Entity<Consignees>().Property(p => p.Dni).IsRequired().HasMaxLength(8);
+        builder.Entity<Consignees>().Property(p => p.Address).IsRequired().HasMaxLength(200);
 
         builder.Entity<Destination>()
             .HasMany(p => p.Shipments)
@@ -57,6 +76,9 @@ public class AppDbContext : DbContext
         
 
         
+
+        
+
         // Apply Snake Case Naming Convention
         builder.UseSnakeCaseNamingConvention();
     }
