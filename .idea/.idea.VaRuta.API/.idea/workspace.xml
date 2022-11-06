@@ -4,9 +4,25 @@
     <projectFile profileName="IIS Express">VaRuta.API/VaRuta.API.csproj</projectFile>
     <projectFile profileName="VaRuta.API">VaRuta.API/VaRuta.API.csproj</projectFile>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
+
+    <list default="true" id="f66817fd-c71d-4e06-a81c-62b23f86c53d" name="Changes" comment="fix delete">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.VaRuta.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VaRuta.API/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VaRuta.API/Booking/Services/TypeOfPackageService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VaRuta.API/Booking/Services/TypeOfPackageService.cs" afterDir="false" />
+
     <list default="true" id="f66817fd-c71d-4e06-a81c-62b23f86c53d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VaRuta.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VaRuta.API/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/VaRuta.API/Booking/Domain/Models/Destination.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VaRuta.API/Booking/Domain/Models/Destination.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VaRuta.API/Routing/Domain/Models/Shipment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VaRuta.API/Routing/Domain/Models/Shipment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VaRuta.API/Shared/Persistence/Contexts/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VaRuta.API/Shared/Persistence/Contexts/AppDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VaRuta.API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/VaRuta.API/appsettings.json" afterDir="false" />
+
+>>>>>>> 0b3fc32ac51a8791f6dc4a5d0545b3f2da649d5e
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +37,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+<<<<<<< HEAD
     <excluded-from-favorite>
       <branch-storage>
         <map>
@@ -47,16 +64,29 @@
         </map>
       </branch-storage>
     </favorite-branches>
+=======
+>>>>>>> 0b3fc32ac51a8791f6dc4a5d0545b3f2da649d5e
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="development" />
       </map>
     </option>
   </component>
+<<<<<<< HEAD
+=======
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/0973ad98ef035242adf2a72425d2282c1bda11166fba44d2eec4c5f2f2184/IInfrastructure.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5330988bfaacf93f15e30f9b3dd6018a768f89da3b38d874fda77299c62164/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Propietario/Desktop/VaRuta.API/VaRuta.API/Booking/Services/TypeOfPackageService.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+>>>>>>> 0b3fc32ac51a8791f6dc4a5d0545b3f2da649d5e
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2H6o66mYiaH1ScPaFI27wSfRCpF" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -66,9 +96,17 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ],
     &quot;rider.external.source.directories&quot;: [
       &quot;C:\\Users\\Usuario\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
       &quot;C:\\Users\\Usuario\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
@@ -120,18 +158,84 @@
       <workItem from="1667620897726" duration="101000" />
       <workItem from="1667624307078" duration="226000" />
       <workItem from="1667624942896" duration="184000" />
+
+      <workItem from="1667625486585" duration="6803000" />
+      <workItem from="1667671406604" duration="2412000" />
+    </task>
+    <task id="LOCAL-00001" summary="add feature type of Package">
+      <created>1667669773535</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1667669773535</updated>
+
       <workItem from="1667625486585" duration="7490000" />
       <workItem from="1667666669473" duration="2677000" />
+<<<<<<< HEAD
       <workItem from="1667680605883" duration="7572000" />
       <workItem from="1667691542575" duration="172000" />
+=======
+      <workItem from="1667680605883" duration="4616000" />
+
     </task>
+    <task id="LOCAL-00002" summary="change password">
+      <created>1667671930362</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1667671930362</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fix delete">
+      <created>1667674687358</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1667674687358</updated>
+>>>>>>> 0b3fc32ac51a8791f6dc4a5d0545b3f2da649d5e
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="add feature type of Package" />
+    <MESSAGE value="change password" />
+    <MESSAGE value="fix delete" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix delete" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/VaRuta.API/Booking/Persistence/Repositories/DocumentRepository.cs</url>
+          <line>11</line>
+          <properties documentPath="C:\Users\Propietario\Desktop\VaRuta.API\VaRuta.API\Booking\Persistence\Repositories\DocumentRepository.cs" initialLine="11" containingFunctionPresentation="constructor 'DocumentRepository'">
+            <startOffsets>
+              <option value="408" />
+            </startOffsets>
+            <endOffsets>
+              <option value="412" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
