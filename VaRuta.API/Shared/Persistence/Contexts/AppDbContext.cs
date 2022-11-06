@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using VaRuta.API.Booking.Domain.Models;
+using VaRuta.API.Routing.Domain.Models;
 using VaRuta.API.Shared.Extensions;
 
 namespace VaRuta.API.Shared.Persistence.Contexts;
@@ -7,7 +8,16 @@ namespace VaRuta.API.Shared.Persistence.Contexts;
 public class AppDbContext : DbContext
 {
     public DbSet<Destination> Destinations { get; set; }
+
     public DbSet<Consignees> Consignees { get; set; }
+
+
+    public DbSet<Document> Documents { get; set; }
+
+    public DbSet<Shipment> Shipments { get; set; }
+    
+    public DbSet<TypeOfPackage> TypeOfPackages { get; set; }
+
 
     public AppDbContext(DbContextOptions options) : base(options)
     {
@@ -22,13 +32,44 @@ public class AppDbContext : DbContext
         builder.Entity<Destination>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
         builder.Entity<Destination>().Property(p => p.Name).IsRequired().HasMaxLength(150);
         
-        // Aqui otras tablas 
+        // tablas de consignees 
+
         builder.Entity<Consignees>().ToTable("Consignees");
         builder.Entity<Consignees>().HasKey(p => p.Id);
         builder.Entity<Consignees>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
         builder.Entity<Consignees>().Property(p => p.Name).IsRequired().HasMaxLength(150);
         builder.Entity<Consignees>().Property(p => p.Dni).IsRequired().HasMaxLength(8);
         builder.Entity<Consignees>().Property(p => p.Address).IsRequired().HasMaxLength(200);
+
+        
+        
+        // configuracion de tabla tipo de paquete
+        builder.Entity<TypeOfPackage>().ToTable("TypeOfPackages");
+        builder.Entity<TypeOfPackage>().HasKey(p => p.Id);
+        builder.Entity<TypeOfPackage>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<TypeOfPackage>().Property(p => p.Name).IsRequired().HasMaxLength(150);
+
+        // configuracion de tabla tipo de Documents
+
+        builder.Entity<Document>().ToTable("Documents");
+        builder.Entity<Document>().HasKey(p => p.Id);
+        builder.Entity<Document>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<Document>().Property(p => p.Name).IsRequired().HasMaxLength(100);
+
+        // configuracion de tabla Shipments
+        builder.Entity<Shipment>().ToTable("Shipments");
+        builder.Entity<Shipment>().HasKey(p => p.Id);
+        builder.Entity<Shipment>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<Shipment>().Property(p => p.Description).IsRequired().HasMaxLength(150);
+
+        builder.Entity<Destination>()
+            .HasMany(p => p.Shipments)
+            .WithOne(p => p.Destination)
+            .HasForeignKey(p => p.DestinyId);
+        
+
+        
+
         // Apply Snake Case Naming Convention
         builder.UseSnakeCaseNamingConvention();
     }

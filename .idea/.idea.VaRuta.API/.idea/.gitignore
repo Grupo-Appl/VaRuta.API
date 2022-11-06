@@ -2,10 +2,14 @@
 /shelf/
 /workspace.xml
 # Rider ignored files
-/modules.xml
+
+
+
 /contentModel.xml
 /.idea.VaRuta.API.iml
 /projectSettingsUpdater.xml
+/modules.xml
+
 # Editor-based HTTP Client requests
 /httpRequests/
 # Datasource local storage ignored files
