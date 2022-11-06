@@ -43,7 +43,21 @@ public class SenderController: ControllerBase
             var senderResource = _mapper.Map<Sender, SenderResource>(result.Resource);
             return Ok(senderResource);
         }
-        
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutAsync(int id, [FromBody] SaveSenderResource resource)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState.GetErrorMessages());
+
+            var sender = _mapper.Map<SaveSenderResource, Sender>(resource);
+            var result = await _senderService.UpdateAsync(id, sender);
+            if (!result.Success)
+                return BadRequest(result.Message);
+
+            var senderResource = _mapper.Map<Sender, SenderResource>(result.Resource);
+            return Ok(senderResource);
+        }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAsync(int id)
