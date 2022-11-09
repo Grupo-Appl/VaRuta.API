@@ -38,6 +38,16 @@
 
       <Folder Include="Routing\Interfaces\Internal" />
 
+      <Folder Include="Security\Authorization" />
+
+      <Folder Include="Security\Exceptions" />
+
+      <Folder Include="Security\Mapping" />
+
+      <Folder Include="Security\Persistence" />
+
+      <Folder Include="Security\Resources" />
+
       <Folder Include="Tracking\Domain\Models" />
       <Folder Include="Tracking\Domain\Repositories" />
       <Folder Include="Tracking\Domain\Services" />
