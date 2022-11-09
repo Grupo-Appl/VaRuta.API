@@ -19,9 +19,9 @@ public class AppDbContext : DbContext
     
     public DbSet<TypeOfPackage> TypeOfPackages { get; set; }
 
-    
-    
-    
+    public DbSet<Freight>Freights { get; set; }
+
+
     public DbSet<Consignees> Consignees { get; set; }
 
 
@@ -65,6 +65,13 @@ public class AppDbContext : DbContext
         builder.Entity<Document>().HasKey(p => p.Id);
         builder.Entity<Document>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
         builder.Entity<Document>().Property(p => p.Name).IsRequired().HasMaxLength(100);
+        
+        // // configuracion de tabla flete
+        builder.Entity<Freight>().ToTable("Freight");
+        builder.Entity<Freight>().HasKey(p => p.Id);
+        builder.Entity<Freight>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<Freight>().Property(p => p.Name).IsRequired().HasMaxLength(50);
+        builder.Entity<Freight>().Property(p => p.Type).IsRequired().HasMaxLength(50);
 
         // configuracion de tabla Shipments
         builder.Entity<Shipment>().ToTable("Shipments");
