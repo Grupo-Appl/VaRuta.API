@@ -1,6 +1,6 @@
 ﻿namespace VaRuta.API.Profiles.Domain.Models;
 
-public class Enterprises
+public class Enterprise
 {
     public int Id { get; set; }    
     public string Name { get; set; }
