@@ -3,6 +3,10 @@ using VaRuta.API.Booking.Domain.Repositories;
 using VaRuta.API.Booking.Domain.Services;
 using VaRuta.API.Booking.Persistence.Repositories;
 using VaRuta.API.Booking.Services;
+using VaRuta.API.Profiles.Domain.Repositories;
+using VaRuta.API.Profiles.Domain.Services;
+using VaRuta.API.Profiles.Persistence.Repositories;
+using VaRuta.API.Profiles.Services;
 using VaRuta.API.Routing.Domain.Repositories;
 using VaRuta.API.Routing.Domain.Services;
 using VaRuta.API.Routing.Persistence.Repositories;
@@ -57,12 +61,18 @@ builder.Services.AddScoped<IDocumentService, DocumentService>();
 builder.Services.AddScoped<ITypeOfPackageRepository, TypeOfPackageRepository>();
 builder.Services.AddScoped<ITypeOfPackageService, TypeOfPackageService>();
 
+
+builder.Services.AddScoped<IEnterpriseRepository, EnterpriseRepository>();
+builder.Services.AddScoped<IEnterpriseService, EnterpriseService>();
+
 // AutoMapper Configuration
 builder.Services.AddAutoMapper(
     typeof(VaRuta.API.Booking.Mapping.ResourceToModelProfile),
     typeof(VaRuta.API.Booking.Mapping.ModelToResourceProfile),
     typeof(VaRuta.API.Routing.Mapping.ResourceToModelProfile),
-    typeof(VaRuta.API.Routing.Mapping.ModelToResourceProfile)
+    typeof(VaRuta.API.Routing.Mapping.ModelToResourceProfile),
+    typeof(VaRuta.API.Profiles.Mapping.ResourceToModelProfile),
+    typeof(VaRuta.API.Profiles.Mapping.ModelToResourceProfile)
     );
 
 var app = builder.Build();
