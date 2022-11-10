@@ -4,10 +4,10 @@ using VaRuta.API.Profiles.Resources;
 
 namespace VaRuta.API.Profiles.Mapping;
 
-public class ModelToResourceProfile :Profile
+public class ResourceToModelProfile : Profile
 {
-    public ModelToResourceProfile()
+    public ResourceToModelProfile()
     {
-        CreateMap< Enterprise , EnterpriseResource>();
+        CreateMap <SaveEnterpriseResource, Enterprise>();
     }
 }
