@@ -18,7 +18,6 @@ using VaRuta.API.Shared.Persistence.Repositories;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -33,35 +32,26 @@ builder.Services.AddDbContext<AppDbContext>(
         .EnableSensitiveDataLogging()
         .EnableDetailedErrors());
 
-// Lowercase URLs configuration (PASAR A MINUSCULAS)
+// Lowercase URLs configuration 
 builder.Services.AddRouting(options => options.LowercaseUrls = true);
 
 // Dependency Injection Configuration
 // Shared Bounded Context Injection Configuration
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
-// Learning Bounded Context Injection Configuration **agregar otros tablas
+// Learning Bounded Context Injection Configuration 
 builder.Services.AddScoped<IDestinationRepository, DestinationRepository>();
 builder.Services.AddScoped<IDestinationService, DestinationService>();
-
-
 builder.Services.AddScoped<ISenderRepository, SenderRepository>();
 builder.Services.AddScoped<ISenderService, SenderService>();
-
-
 builder.Services.AddScoped<IShipmentRepository, ShipmentRepository>();
 builder.Services.AddScoped<IShipmentService, ShipmentService>();
-
 builder.Services.AddScoped<IConsigneesRepository, ConsigneeRepository>();
 builder.Services.AddScoped<IConsigneesService, ConsigneesService>();
-
-
 builder.Services.AddScoped<IDocumentRepository, DocumentRepository>();
 builder.Services.AddScoped<IDocumentService, DocumentService>();
 builder.Services.AddScoped<ITypeOfPackageRepository, TypeOfPackageRepository>();
 builder.Services.AddScoped<ITypeOfPackageService, TypeOfPackageService>();
-
-
 builder.Services.AddScoped<IEnterpriseRepository, EnterpriseRepository>();
 builder.Services.AddScoped<IEnterpriseService, EnterpriseService>();
 
