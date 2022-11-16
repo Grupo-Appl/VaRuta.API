@@ -1,9 +1,8 @@
-﻿namespace VaRuta.API.Publishing.Domain;
+﻿namespace VaRuta.API.Publishing.Resources;
 
-public class Feedback
+public class FeedbackResource
 {
     public int Id { get; set; }
-    
     public string date { get; set; }
     public string Description { get; set; }
 }

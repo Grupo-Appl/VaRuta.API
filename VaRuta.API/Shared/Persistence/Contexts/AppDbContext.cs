@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using VaRuta.API.Booking.Domain.Models;
+using VaRuta.API.Publishing.Domain;
 using VaRuta.API.Routing.Domain.Models;
 using VaRuta.API.Shared.Extensions;
 
@@ -21,7 +22,7 @@ public class AppDbContext : DbContext
 
     public DbSet<Freight>Freights { get; set; }
 
-
+    public DbSet<Feedback>Feedbacks { get; set; }
     public DbSet<Consignees> Consignees { get; set; }
 
 
@@ -65,6 +66,12 @@ public class AppDbContext : DbContext
         builder.Entity<Document>().HasKey(p => p.Id);
         builder.Entity<Document>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
         builder.Entity<Document>().Property(p => p.Name).IsRequired().HasMaxLength(100);
+        
+        // configuracion de tabla feedback
+        builder.Entity<Feedback>().ToTable("Feedbacks");
+        builder.Entity<Feedback>().HasKey(p => p.Id);
+        builder.Entity<Feedback>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<Feedback>().Property(p => p.Description).IsRequired().HasMaxLength(500);
         
         // // configuracion de tabla flete
         builder.Entity<Freight>().ToTable("Freight");

@@ -26,13 +26,7 @@
       <Folder Include="Profiles\Persistence\Repositories" />
       <Folder Include="Profiles\Resources" />
       <Folder Include="Profiles\Services" />
-      <Folder Include="Publishing\Domain\Services" />
       <Folder Include="Publishing\Interfaces\Internal" />
-      <Folder Include="Publishing\Interfaces\Rest\Controllers" />
-      <Folder Include="Publishing\Mapping" />
-      <Folder Include="Publishing\Persistence\Repositories" />
-      <Folder Include="Publishing\Resources" />
-      <Folder Include="Publishing\Services" />
 
       <Folder Include="Routing\Interfaces\Internal" />
 
