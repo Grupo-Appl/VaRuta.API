@@ -2,7 +2,7 @@
 
 namespace VaRuta.API.Tracking.Domain.Models;
 
-public class Deliver
+public class Delivery
 {
     public int Id { get; set;}
     public string  Date { get; set; }
