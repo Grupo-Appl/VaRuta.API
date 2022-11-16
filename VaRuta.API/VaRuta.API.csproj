@@ -26,7 +26,6 @@
       <Folder Include="Profiles\Persistence\Repositories" />
       <Folder Include="Profiles\Resources" />
       <Folder Include="Profiles\Services" />
-      <Folder Include="Publishing\Domain\Models" />
       <Folder Include="Publishing\Domain\Repositories" />
       <Folder Include="Publishing\Domain\Services" />
       <Folder Include="Publishing\Interfaces\Internal" />
