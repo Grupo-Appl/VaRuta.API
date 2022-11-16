@@ -29,7 +29,6 @@
       <Folder Include="Publishing\Services" />
 
       <Folder Include="Routing\Interfaces\Internal" />
-      <Folder Include="Tracking\Domain\Services" />
       <Folder Include="Tracking\Interfaces\Internal" />
       <Folder Include="Tracking\Interfaces\Rest\Controllers" />
       <Folder Include="Tracking\Mapping" />
