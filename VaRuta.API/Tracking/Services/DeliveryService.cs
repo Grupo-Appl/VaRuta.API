@@ -1,4 +1,6 @@
-﻿using VaRuta.API.Tracking.Domain.Models;
+﻿using VaRuta.API.Shared.Domain.Repositories;
+using VaRuta.API.Tracking.Domain.Models;
+using VaRuta.API.Tracking.Domain.Repositories;
 using VaRuta.API.Tracking.Domain.Services;
 using VaRuta.API.Tracking.Domain.Services.Communication;
 
@@ -6,24 +8,73 @@ namespace VaRuta.API.Tracking.Services;
 
 public class DeliveryService : IDeliveryService
 {
-    private IDeliveryService _deliveryServiceImplementation;
-    public Task<IEnumerable<Delivery>> ListAsync()
+    private readonly IDeliveryRepository _deliveryRepository;
+    private readonly IUnitOfWork _unitOfWork;
+
+    public DeliveryService(IDeliveryRepository deliveryRepository, IUnitOfWork unitOfWork)
     {
-        return _deliveryServiceImplementation.ListAsync();
+        _deliveryRepository = deliveryRepository;
+        _unitOfWork = unitOfWork;
     }
 
-    public Task<DeliveryResponse> SaveAsync(Delivery delivery)
+    public async Task<IEnumerable<Delivery>> ListAsync()
     {
-        return _deliveryServiceImplementation.SaveAsync(delivery);
+        return await _deliveryRepository.ListAsync();
     }
 
-    public Task<DeliveryResponse> UpdateAsync(int id, Delivery delivery)
+    public async Task<DeliveryResponse> SaveAsync(Delivery delivery)
     {
-        return _deliveryServiceImplementation.UpdateAsync(id, delivery);
+        try
+        {
+            await _deliveryRepository.AddAsync(delivery);
+            await _unitOfWork.CompleteAsync();
+            return new DeliveryResponse(delivery);
+        }
+        catch (Exception e)
+        {
+            return new DeliveryResponse($"An error occurred while saving delivery: {e.Message}");
+        }
     }
 
-    public Task<DeliveryResponse> DeleteAsync(int id)
+    public async Task<DeliveryResponse> UpdateAsync(int id, Delivery delivery)
     {
-        return _deliveryServiceImplementation.DeleteAsync(id);
+        var existingDelivery = await _deliveryRepository.FindByIdAsync(id);
+
+        if (existingDelivery == null)
+            return new DeliveryResponse("Delivery not found.");
+
+        existingDelivery.Description = delivery.Description;
+
+        try
+        {
+            _deliveryRepository.Update(existingDelivery);
+            await _unitOfWork.CompleteAsync();
+
+            return new DeliveryResponse(existingDelivery);
+        }
+        catch (Exception e)
+        {
+            return new DeliveryResponse($"An error occurred while updating delivery: {e.Message}");
+        }
+    }
+
+    public async Task<DeliveryResponse> DeleteAsync(int id)
+    {
+        var existingDelivery = await _deliveryRepository.FindByIdAsync(id);
+
+        if (existingDelivery == null)
+            return new DeliveryResponse("Delivery not found.");
+
+        try
+        {
+            _deliveryRepository.Remove(existingDelivery);
+            await _unitOfWork.CompleteAsync();
+
+            return new DeliveryResponse(existingDelivery);
+        }
+        catch (Exception e)
+        {
+            return new DeliveryResponse($"An error occurred while deleting delivery: {e.Message}");
+        }
     }
 }
