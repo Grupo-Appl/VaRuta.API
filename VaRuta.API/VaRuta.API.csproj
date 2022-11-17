@@ -30,7 +30,6 @@
 
       <Folder Include="Routing\Interfaces\Internal" />
       <Folder Include="Tracking\Interfaces\Internal" />
-      <Folder Include="Tracking\Interfaces\Rest\Controllers" />
     </ItemGroup>
 
 </Project>
