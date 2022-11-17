@@ -27,7 +27,6 @@
       <Folder Include="Profiles\Resources" />
       <Folder Include="Profiles\Services" />
       <Folder Include="Publishing\Interfaces\Internal" />
-      <Folder Include="Publishing\Mapping" />
 
       <Folder Include="Routing\Interfaces\Internal" />
 

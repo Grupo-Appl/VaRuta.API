@@ -10,8 +10,8 @@ namespace VaRuta.API.Publishing.Interfaces.Rest.Controllers;
 [ApiController]
 [Route("/api/v1/[controller]")]
 public class TypeOfComplaintController: ControllerBase
-{
-     private readonly ITypeOfComplaintService _typeOfComplaintService;
+{ 
+      private readonly ITypeOfComplaintService _typeOfComplaintService;
     private readonly IMapper _mapper;
 
     public TypeOfComplaintController(ITypeOfComplaintService typeOfComplaintService, IMapper mapper)
