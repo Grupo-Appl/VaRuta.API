@@ -5,8 +5,8 @@ namespace VaRuta.API.Booking.Domain.Repositories;
 public interface IDestinationRepository
 {
     Task<IEnumerable<Destination>> ListAsync();
-    Task AddAsync(Destination category);
+    Task AddAsync(Destination destination);
     Task<Destination> FindByIdAsync(int id);
-    void Update(Destination category);
-    void Remove(Destination category);
+    void Update(Destination destination);
+    void Remove(Destination destination);
 }

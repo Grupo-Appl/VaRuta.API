@@ -17,15 +17,7 @@
 
     <ItemGroup>
       <Folder Include="Booking\Interfaces\Internal" />
-      <Folder Include="Profiles\Domain\Models" />
-      <Folder Include="Profiles\Domain\Repositories" />
-      <Folder Include="Profiles\Domain\Services" />
       <Folder Include="Profiles\Interfaces\Internal" />
-      <Folder Include="Profiles\Interfaces\Rest\Controllers" />
-      <Folder Include="Profiles\Mapping" />
-      <Folder Include="Profiles\Persistence\Repositories" />
-      <Folder Include="Profiles\Resources" />
-      <Folder Include="Profiles\Services" />
       <Folder Include="Publishing\Domain\Models" />
       <Folder Include="Publishing\Domain\Repositories" />
       <Folder Include="Publishing\Domain\Services" />
@@ -35,24 +27,9 @@
       <Folder Include="Publishing\Persistence\Repositories" />
       <Folder Include="Publishing\Resources" />
       <Folder Include="Publishing\Services" />
-      <Folder Include="Routing\Domain\Models" />
-      <Folder Include="Routing\Domain\Repositories" />
-      <Folder Include="Routing\Domain\Services" />
+
       <Folder Include="Routing\Interfaces\Internal" />
-      <Folder Include="Routing\Interfaces\Rest\Controllers" />
-      <Folder Include="Routing\Mapping" />
-      <Folder Include="Routing\Persistence\Repositories" />
-      <Folder Include="Routing\Resources" />
-      <Folder Include="Routing\Services" />
-      <Folder Include="Tracking\Domain\Models" />
-      <Folder Include="Tracking\Domain\Repositories" />
-      <Folder Include="Tracking\Domain\Services" />
       <Folder Include="Tracking\Interfaces\Internal" />
-      <Folder Include="Tracking\Interfaces\Rest\Controllers" />
-      <Folder Include="Tracking\Mapping" />
-      <Folder Include="Tracking\Persistence\Repositories" />
-      <Folder Include="Tracking\Resources" />
-      <Folder Include="Tracking\Services" />
     </ItemGroup>
 
 </Project>
