@@ -29,16 +29,7 @@
       <Folder Include="Publishing\Services" />
 
       <Folder Include="Routing\Interfaces\Internal" />
-
-      <Folder Include="Tracking\Domain\Models" />
-      <Folder Include="Tracking\Domain\Repositories" />
-      <Folder Include="Tracking\Domain\Services" />
       <Folder Include="Tracking\Interfaces\Internal" />
-      <Folder Include="Tracking\Interfaces\Rest\Controllers" />
-      <Folder Include="Tracking\Mapping" />
-      <Folder Include="Tracking\Persistence\Repositories" />
-      <Folder Include="Tracking\Resources" />
-      <Folder Include="Tracking\Services" />
     </ItemGroup>
 
 </Project>

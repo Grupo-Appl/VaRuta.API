@@ -14,6 +14,10 @@ using VaRuta.API.Routing.Services;
 using VaRuta.API.Shared.Domain.Repositories;
 using VaRuta.API.Shared.Persistence.Contexts;
 using VaRuta.API.Shared.Persistence.Repositories;
+using VaRuta.API.Tracking.Domain.Repositories;
+using VaRuta.API.Tracking.Domain.Services;
+using VaRuta.API.Tracking.Persistence.Repositories;
+using VaRuta.API.Tracking.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -54,6 +58,8 @@ builder.Services.AddScoped<ITypeOfPackageRepository, TypeOfPackageRepository>();
 builder.Services.AddScoped<ITypeOfPackageService, TypeOfPackageService>();
 builder.Services.AddScoped<IEnterpriseRepository, EnterpriseRepository>();
 builder.Services.AddScoped<IEnterpriseService, EnterpriseService>();
+builder.Services.AddScoped<IDeliveryRepository, DeliveryRepository>();
+builder.Services.AddScoped<IDeliveryService, DeliveryService>();
 
 // AutoMapper Configuration
 builder.Services.AddAutoMapper(
@@ -62,7 +68,9 @@ builder.Services.AddAutoMapper(
     typeof(VaRuta.API.Routing.Mapping.ResourceToModelProfile),
     typeof(VaRuta.API.Routing.Mapping.ModelToResourceProfile),
     typeof(VaRuta.API.Profiles.Mapping.ResourceToModelProfile),
-    typeof(VaRuta.API.Profiles.Mapping.ModelToResourceProfile)
+    typeof(VaRuta.API.Profiles.Mapping.ModelToResourceProfile),
+    typeof(VaRuta.API.Tracking.Mapping.ResourceToModelProfile),
+    typeof(VaRuta.API.Tracking.Mapping.ModelToResourceProfile)
     );
 
 var app = builder.Build();
