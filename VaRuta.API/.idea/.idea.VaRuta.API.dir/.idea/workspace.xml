@@ -4,27 +4,62 @@
     <projectFile profileName="IIS Express">VaRuta.API.csproj</projectFile>
     <projectFile profileName="VaRuta.API">VaRuta.API.csproj</projectFile>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="22cc4da6-d61c-4fc7-8ccc-a0d32cccf973" name="Changes" comment="" />
+    <list default="true" id="22cc4da6-d61c-4fc7-8ccc-a0d32cccf973" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.VaRuta.API.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VaRuta.API.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Publishing/Domain/Models/Feedback.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Publishing/Domain/Models/Feedback.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/Persistence/Contexts/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Persistence/Contexts/AppDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VaRuta.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/VaRuta.API.csproj" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="feature/typeOfFreight" />
+      </map>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/Propietario/Desktop/VaRuta.API/VaRuta.API/Publishing/Domain/Models/Feedback.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Propietario/Desktop/VaRuta.API/VaRuta.API/Shared/Persistence/Contexts/AppDbContext.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2H74LZkHKcaB1AWnoB0RURunliq" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Git.Branch.Popup.ShowAllRemotes&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;PLAIN_TEXT&quot;,
+      &quot;C#&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.VaRuta.API">
     <configuration name="VaRuta.API" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/VaRuta.API.csproj" />
@@ -66,7 +101,32 @@
       <option name="presentableId" value="Default" />
       <updated>1667622732446</updated>
       <workItem from="1667622743836" duration="11000" />
+      <workItem from="1668017740424" duration="171000" />
+      <workItem from="1668115326832" duration="1627000" />
+      <workItem from="1668616174541" duration="4550000" />
     </task>
+    <task id="LOCAL-00001" summary="add Feight">
+      <created>1668015743683</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668015743683</updated>
+    </task>
+    <task id="LOCAL-00002" summary="end feature freight">
+      <created>1668017878872</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668017878872</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add feedbacck">
+      <created>1668116909269</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668116909269</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,5 +147,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="add Feight" />
+    <MESSAGE value="end feature freight" />
+    <MESSAGE value="add feedbacck" />
+    <option name="LAST_COMMIT_MESSAGE" value="add feedbacck" />
   </component>
 </project>

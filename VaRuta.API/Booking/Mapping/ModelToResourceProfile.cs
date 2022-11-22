@@ -13,6 +13,8 @@ public class ModelToResourceProfile :Profile
         CreateMap< TypeOfPackage , TypeOfPackageResource>();
         CreateMap<Destination, DestinationResource>();
         CreateMap<Consignees, ConsigneesResource>();
+        CreateMap<Freight, FreightResource>();
+
     }
 }
 

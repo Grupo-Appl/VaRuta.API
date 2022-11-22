@@ -14,7 +14,7 @@ public class ResourceToModelProfile : Profile
 
         CreateMap<SaveSenderResource, Sender>();
 
-
+        CreateMap<SaveFreightResource, Freight>();
         CreateMap<SaveDocumentResource, Document>();
         CreateMap<SaveTypeOfPackageResource, TypeOfPackage>();
         CreateMap<SaveConsigneesResource, Consignees>();
