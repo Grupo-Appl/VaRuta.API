@@ -25,13 +25,23 @@
       <Folder Include="Profiles\Resources" />
       <Folder Include="Profiles\Services" />
 
+      <Folder Include="Publishing\Interfaces\Internal" />
+      <Folder Include="Routing\Interfaces\Internal" />
+      <Folder Include="Security\Authorization" />
+      <Folder Include="Security\Exceptions" />
+      <Folder Include="Security\Mapping" />
+      <Folder Include="Security\Persistence" />
+      <Folder Include="Security\Resources" />
+      <Folder Include="Tracking\Domain\Models" />
+      <Folder Include="Tracking\Domain\Repositories" />
+      <Folder Include="Tracking\Domain\Services" />
+
       <Folder Include="Publishing\Domain\Models" />
       <Folder Include="Publishing\Domain\Repositories" />
       <Folder Include="Publishing\Domain\Services" />
-
       <Folder Include="Publishing\Interfaces\Internal" />
-
       <Folder Include="Routing\Interfaces\Internal" />
+
       <Folder Include="Tracking\Interfaces\Internal" />
     </ItemGroup>
 

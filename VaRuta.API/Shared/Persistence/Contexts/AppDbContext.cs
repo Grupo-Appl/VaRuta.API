@@ -1,10 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using VaRuta.API.Booking.Domain.Models;
-
 using VaRuta.API.Publishing.Domain;
-
 using VaRuta.API.Profiles.Domain.Models;
-
 using VaRuta.API.Routing.Domain.Models;
 using VaRuta.API.Shared.Extensions;
 using VaRuta.API.Tracking.Domain.Models;
@@ -25,7 +22,14 @@ public class AppDbContext : DbContext
     
     public DbSet<TypeOfPackage> TypeOfPackages { get; set; }
 
+
+    
+    public DbSet<TypeOfComplaint> TypeOfComplaint { get; set; }
+    
+    public DbSet<Consignees> Consignees { get; set; }
+
     public DbSet<Freight>Freights { get; set; }
+
 
     public DbSet<Feedback>Feedbacks { get; set; }
     public DbSet<Consignees> Consignees { get; set; }
@@ -67,6 +71,12 @@ public class AppDbContext : DbContext
         builder.Entity<TypeOfPackage>().HasKey(p => p.Id);
         builder.Entity<TypeOfPackage>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
         builder.Entity<TypeOfPackage>().Property(p => p.Name).IsRequired().HasMaxLength(150);
+        
+        //configuracion de tabla tipo de reclamo
+        builder.Entity<TypeOfComplaint>().ToTable("TypeOfComplaint");
+        builder.Entity<TypeOfComplaint>().HasKey(p => p.Id);
+        builder.Entity<TypeOfComplaint>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<TypeOfComplaint>().Property(p => p.Name).IsRequired().HasMaxLength(150);
 
         // configuracion de tabla tipo de Documents
 
