@@ -17,15 +17,7 @@
 
     <ItemGroup>
       <Folder Include="Booking\Interfaces\Internal" />
-      <Folder Include="Profiles\Domain\Models" />
-      <Folder Include="Profiles\Domain\Repositories" />
-      <Folder Include="Profiles\Domain\Services" />
       <Folder Include="Profiles\Interfaces\Internal" />
-      <Folder Include="Profiles\Interfaces\Rest\Controllers" />
-      <Folder Include="Profiles\Mapping" />
-      <Folder Include="Profiles\Persistence\Repositories" />
-      <Folder Include="Profiles\Resources" />
-      <Folder Include="Profiles\Services" />
       <Folder Include="Publishing\Domain\Models" />
       <Folder Include="Publishing\Domain\Repositories" />
       <Folder Include="Publishing\Domain\Services" />

@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using VaRuta.API.Booking.Domain.Models;
+using VaRuta.API.Profiles.Domain.Models;
 using VaRuta.API.Routing.Domain.Models;
 using VaRuta.API.Shared.Extensions;
 
@@ -24,7 +25,7 @@ public class AppDbContext : DbContext
     
     public DbSet<Consignees> Consignees { get; set; }
 
-
+    public DbSet<Enterprise> Enterprises { get; set; }
     public AppDbContext(DbContextOptions options) : base(options)
     {
     }
