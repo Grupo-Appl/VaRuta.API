@@ -8,8 +8,7 @@ namespace VaRuta.API.Booking.Services;
 
 public class DocumentService : IDocumentService
 {
-    
-    private readonly IDocumentRepository _documentRepository; 
+    private readonly IDocumentRepository _documentRepository;
     private readonly IUnitOfWork _unitOfWork;
 
     public DocumentService(IDocumentRepository documentRepository, IUnitOfWork unitOfWork)
@@ -17,7 +16,7 @@ public class DocumentService : IDocumentService
         _documentRepository = documentRepository;
         _unitOfWork = unitOfWork;
     }
-    
+
     public async Task<IEnumerable<Document>> ListAsync()
     {
         return await _documentRepository.ListAsync();
@@ -72,12 +71,10 @@ public class DocumentService : IDocumentService
             await _unitOfWork.CompleteAsync();
 
             return new DocumentResponse(existingDocument);
-
         }
         catch (Exception e)
         {
             return new DocumentResponse($"An error occurred while deleting the document: {e.Message}");
         }
     }
-	
 }

@@ -57,7 +57,8 @@ builder.Services.AddScoped<IDocumentService, DocumentService>();
 builder.Services.AddScoped<ITypeOfPackageRepository, TypeOfPackageRepository>();
 builder.Services.AddScoped<ITypeOfPackageService, TypeOfPackageService>();
 
-builder.Services.AddScoped<IFreightService, IFreightService>();
+builder.Services.AddScoped<IFreightRepository, FreightRepository>();
+builder.Services.AddScoped<IFreightService, FreightService>();
 
 builder.Services.AddScoped<IEnterpriseRepository, EnterpriseRepository>();
 builder.Services.AddScoped<IEnterpriseService, EnterpriseService>();
@@ -74,7 +75,9 @@ builder.Services.AddAutoMapper(
     typeof(VaRuta.API.Profiles.Mapping.ResourceToModelProfile),
     typeof(VaRuta.API.Profiles.Mapping.ModelToResourceProfile),
     typeof(VaRuta.API.Tracking.Mapping.ResourceToModelProfile),
-    typeof(VaRuta.API.Tracking.Mapping.ModelToResourceProfile)
+    typeof(VaRuta.API.Tracking.Mapping.ModelToResourceProfile),
+    typeof(VaRuta.API.Publishing.Mapping.ResourceToModelProfile),
+    typeof(VaRuta.API.Publishing.Mapping.ModelToResourceProfile)
     );
 
 var app = builder.Build();
