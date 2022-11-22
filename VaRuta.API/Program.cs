@@ -56,10 +56,14 @@ builder.Services.AddScoped<IDocumentRepository, DocumentRepository>();
 builder.Services.AddScoped<IDocumentService, DocumentService>();
 builder.Services.AddScoped<ITypeOfPackageRepository, TypeOfPackageRepository>();
 builder.Services.AddScoped<ITypeOfPackageService, TypeOfPackageService>();
+
+builder.Services.AddScoped<IFreightService, IFreightService>();
+
 builder.Services.AddScoped<IEnterpriseRepository, EnterpriseRepository>();
 builder.Services.AddScoped<IEnterpriseService, EnterpriseService>();
 builder.Services.AddScoped<IDeliveryRepository, DeliveryRepository>();
 builder.Services.AddScoped<IDeliveryService, DeliveryService>();
+
 
 // AutoMapper Configuration
 builder.Services.AddAutoMapper(

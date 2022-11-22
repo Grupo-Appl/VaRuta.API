@@ -1,6 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using VaRuta.API.Booking.Domain.Models;
+
+using VaRuta.API.Publishing.Domain;
+
 using VaRuta.API.Profiles.Domain.Models;
+
 using VaRuta.API.Routing.Domain.Models;
 using VaRuta.API.Shared.Extensions;
 using VaRuta.API.Tracking.Domain.Models;
@@ -21,9 +25,9 @@ public class AppDbContext : DbContext
     
     public DbSet<TypeOfPackage> TypeOfPackages { get; set; }
 
-    
-    
-    
+    public DbSet<Freight>Freights { get; set; }
+
+    public DbSet<Feedback>Feedbacks { get; set; }
     public DbSet<Consignees> Consignees { get; set; }
 
     public DbSet<Enterprise> Enterprises { get; set; }
@@ -70,6 +74,19 @@ public class AppDbContext : DbContext
         builder.Entity<Document>().HasKey(p => p.Id);
         builder.Entity<Document>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
         builder.Entity<Document>().Property(p => p.Name).IsRequired().HasMaxLength(100);
+        
+        // configuracion de tabla feedback
+        builder.Entity<Feedback>().ToTable("Feedbacks");
+        builder.Entity<Feedback>().HasKey(p => p.Id);
+        builder.Entity<Feedback>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<Feedback>().Property(p => p.Description).IsRequired().HasMaxLength(500);
+        
+        // // configuracion de tabla flete
+        builder.Entity<Freight>().ToTable("Freight");
+        builder.Entity<Freight>().HasKey(p => p.Id);
+        builder.Entity<Freight>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<Freight>().Property(p => p.Name).IsRequired().HasMaxLength(50);
+        builder.Entity<Freight>().Property(p => p.Type).IsRequired().HasMaxLength(50);
 
         // configuracion de tabla Shipments
         builder.Entity<Shipment>().ToTable("Shipments");
