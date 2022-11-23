@@ -10,4 +10,6 @@ public class SaveFeedbackResource
     [Required]
     [MaxLength(500)]
     public string Description { get; set; }
+    public int TypeOfComplaintId { get; set; }
+    public int ShipmentId { get; set; }
 }

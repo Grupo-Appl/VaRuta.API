@@ -1,4 +1,6 @@
-﻿namespace VaRuta.API.Booking.Domain.Models;
+﻿using VaRuta.API.Routing.Domain.Models;
+
+namespace VaRuta.API.Booking.Domain.Models;
 
 public class Consignees
 {
@@ -10,4 +12,5 @@ public class Consignees
     public string Dni { get; set; }
 
     public string Address { get; set; }
+    public List<Shipment> Shipments { get; set; }
 }

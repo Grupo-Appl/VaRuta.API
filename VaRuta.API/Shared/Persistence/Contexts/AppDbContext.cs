@@ -22,6 +22,7 @@ public class AppDbContext : DbContext
     public DbSet<Feedback> Feedbacks { get; set; }
     public DbSet<Enterprise> Enterprises { get; set; }
     public DbSet<Delivery> Deliveries { get; set; }
+    
 
     public AppDbContext(DbContextOptions options) : base(options)
     {
@@ -90,11 +91,49 @@ public class AppDbContext : DbContext
         builder.Entity<Consignees>().Property(p => p.Name).IsRequired().HasMaxLength(150);
         builder.Entity<Consignees>().Property(p => p.Dni).IsRequired().HasMaxLength(8);
         builder.Entity<Consignees>().Property(p => p.Address).IsRequired().HasMaxLength(200);
+        
+        // configuracion de tabla Deliveries
+        builder.Entity<Delivery>().ToTable("Deliveries");
+        builder.Entity<Delivery>().HasKey(p => p.Id);
+        builder.Entity<Delivery>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<Delivery>().Property(p => p.Description).IsRequired().HasMaxLength(150);        
 
         builder.Entity<Destination>()
             .HasMany(p => p.Shipments)
             .WithOne(p => p.Destination)
             .HasForeignKey(p => p.DestinyId);
+        
+        builder.Entity<Sender>()
+            .HasMany(p => p.Shipments)
+            .WithOne(p => p.Sender)
+            .HasForeignKey(p => p.SenderId);
+        
+        builder.Entity<Consignees>()
+            .HasMany(p => p.Shipments)
+            .WithOne(p => p.Consignees)
+            .HasForeignKey(p => p.ConsigneesId); 
+
+        builder.Entity<Document>()
+            .HasMany(p => p.Shipments)
+            .WithOne(p => p.Document)
+            .HasForeignKey(p => p.DocumentId);   
+        
+        builder.Entity<Shipment>()
+            .HasMany(p => p.Delivery)
+            .WithOne(p => p.Shipment)
+            .HasForeignKey(p => p.ShipmentId);   
+        
+        builder.Entity<Shipment>()
+            .HasMany(p => p.Feedback)
+            .WithOne(p => p.Shipment)
+            .HasForeignKey(p => p.ShipmentId); 
+        
+        builder.Entity<TypeOfComplaint>()
+            .HasMany(p => p.Feedback)
+            .WithOne(p => p.TypeOfComplaint)
+            .HasForeignKey(p => p.TypeOfComplaintId);
+
+        
 
         // Apply Snake Case Naming Convention
         builder.UseSnakeCaseNamingConvention();

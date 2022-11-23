@@ -12,4 +12,8 @@ public class SaveShipmentResource
     public int Weight { get; set; }
     public string  Date { get; set; }
     public int DestinyId { get; set; }
+    public int ConsigneesId { get; set; } 
+    public int SenderId { get; set; }
+    public int TypeOfPackageId { get; set; }
+    public int DocumentId { get; set; }
 }

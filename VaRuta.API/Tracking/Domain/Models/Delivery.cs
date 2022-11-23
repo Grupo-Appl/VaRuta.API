@@ -8,7 +8,6 @@ public class Delivery
     public string  Date { get; set; }
     public string Description { get; set; }
     public int ShipmentId { get; set; }
-    
     public Shipment Shipment { get; set; }
     
 }
