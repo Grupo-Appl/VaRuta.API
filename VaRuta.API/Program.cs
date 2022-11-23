@@ -23,6 +23,7 @@ using VaRuta.API.Tracking.Domain.Services;
 using VaRuta.API.Tracking.Persistence.Repositories;
 using VaRuta.API.Tracking.Services;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -71,6 +72,9 @@ builder.Services.AddScoped<IEnterpriseService, EnterpriseService>();
 builder.Services.AddScoped<IDeliveryRepository, DeliveryRepository>();
 builder.Services.AddScoped<IDeliveryService, DeliveryService>();
 
+builder.Services.AddScoped<IFeedbackRepository, FeedbackRepository>();
+builder.Services.AddScoped<IFeedbackService, FeedbackService>();
+
 
 // AutoMapper Configuration
 builder.Services.AddAutoMapper(
@@ -94,6 +98,12 @@ using (var context = scope.ServiceProvider.GetService<AppDbContext>())
 {
     context.Database.EnsureCreated();
 }
+
+// CORS
+app.UseCors(x => x
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader());
 
 // Configure the HTTP request pipeline.
 //if (app.Environment.IsDevelopment())
